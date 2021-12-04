@@ -16,18 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
-# from django.http import HttpResponse
+from django.http import HttpResponse
 from django.conf import settings
 from django.conf.urls.static import static
 
 
-# def home(request):
-#     return HttpResponse('hello')
+def home(request):
+    return HttpResponse('hello')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include('api.urls')),
-    # path('', home),
-]
-+    static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('', home),
+]+    static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
