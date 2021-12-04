@@ -28,10 +28,11 @@ STATICFILES_DIRS = (
 SECRET_KEY = 'django-insecure-fu=p%cv(jwrf+qfi1gsg^n$^sxheols)^gq7h(!ir!24#ny)nv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
-ALLOWED_HOSTS = ['h3atestapi.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['h3atestapi.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -72,7 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'whitenoise.middleware.WhiteNoiseMiddleware',
+                # 'whitenoise.middleware.WhiteNoiseMiddleware',
             ],
         },
     },
